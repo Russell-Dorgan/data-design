@@ -9,3 +9,5 @@
 		<li>Messaging some more tenured individuals on the forum to pick their brain about certain subjects</li>
 	</ul>
 </div>
+
+<link rel="stylesheet" href="styles.css">

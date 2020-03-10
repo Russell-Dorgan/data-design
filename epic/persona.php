@@ -11,3 +11,5 @@
 		</ul>
 	</p>
 </div>
+
+<link rel="stylesheet" href="styles.css">
