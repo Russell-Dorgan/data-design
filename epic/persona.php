@@ -13,3 +13,6 @@
 </div>
 
 <link rel="stylesheet" href="styles.css">
+
+<!--Could not manage to link photo, only portrayed altName-->
+<!--Could not link style sheets to 3 sub .php files under directory 'epic'-->
