@@ -13,6 +13,33 @@
 	<li><a href="epic/use-case-interaction-flow.php">Use Case Interaction Flow</a></li>
 </ul>
 
+<p> REDDIT:
+	<ul>
+
+	<li><strong>PROFILE:</strong></li>
+	<li>profileId (primary key)</li>
+	<li>profileActivationToken (for account verification)</li>
+	<li>profileHandle (to denote your username)</li>
+	<li>profileEmail (for push notifications as well as potential password reset)</li>
+	<li>profilePhone (for further authentication if needed)</li>
+
+	<li><strong>FORUM POST INTERACTIONS:</strong></li>
+	<li>postID (to denote who started or contributed to the thread)</li>
+	<li>redditProfileId (so users can go to users reddit profile and inspect what sort of threads the user is aprticpating in)</li>
+	<li>threadPostDate (to document when thread and or post was created)</li>
+
+	<li><strong>"LIKING" SYSTEM:</strong>
+	<li>redditUpVote (so users can see if user upvoted or not)</li>
+	<li>redditDownVote (so users can see if user downvoted or not)</li>
+
+	<li><strong>RELATION:</strong>
+	<li>One reddit account can make multiple posts and or comments (1 to n)</li>
+	<li>Many forum post interactions can be tracked back to the users profile. (m to n)</li>
+</p>
+</ul>
+
+<img src="ERD%20Chart.png" alt="ERDchart">
+
 <link rel="stylesheet" href="styles.css">
 
 </body>
