@@ -23,7 +23,7 @@
 	<li>profileEmail (for further authentication if needed)</li>
 	<li>profilePhone (for push notifications as well as potential password reset)</li>
 
-	<li><strong>POSTS:</strong></li>
+	<li><strong>POST:</strong></li>
 	<li>postID (to denote who started or contributed to the thread)</li>
 	<li>postProfileId (so users can go to users reddit profile and inspect what sort of threads the user is aprticpating in)</li>
 	<li>postTitle (to show name of thread)</li>
@@ -32,10 +32,14 @@
 	<li>postImage (field so user can post html link to post an image)</li>
 
 
-	<li><strong>INTERACTIONS:</strong></li>
-	<li>redditUpVote (so users can see if user upvoted or not)</li>
-	<li>redditDownVote (so users can see if user downvoted or not)</li>
-	<li>otherUserIds (to denote what other users commented on post)</li>
+	<li><strong>INTERACTION:</strong></li>
+	<li>interactionId (so users can see who posted what and navigate to their profile)</li>
+	<li>interactionPostId (so users can see the name of the member who posted)</li>
+	<li>interactionProfileId (to denote what other users commented on post)</li>
+	<li>interactionUpvote (BOOLEAN for upvoting or downvoting)</li>
+	<li>interactionDownvote (BOOLEAN for upvoting or downvoting)</li>
+	<li>interactionReplyId (so users can see who posts which replies)</li>
+	<li>interactionReply (so users can reply)</li>
 
 
 
