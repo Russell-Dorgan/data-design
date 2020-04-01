@@ -4,31 +4,36 @@ drop table if exists Interactions;
 drop table if exists ForumPosts;
 drop table if exists Profile;
 
-create table Profile(
-    profileID binary(16) not null,
-    profileActivationToken char(32), primary key,
-    profileAvatar,
-    profilePhone VARCHAR(10) not null,
-    profileEmail VARCHAR(25) not null,
+create table profile(
+    profileId binary(16) not null,
+    profileActivationToken char(32),
+    profilePhone VARCHAR(15) not null,
+    profileEmail VARCHAR(50) not null,
+    profileUsername VARCHAR(20) not null,
+    PRIMARY KEY(profileId),
+    UNIQUE(profileEmail),
+    UNIQUE(profileUsername),
+    UNIQUE(profilePhone)
+
 );
-create table ForumPosts(
+create table post(
     postId binary(16) not null,
-    postName varchar(32) not null,
-    authorAvatar,
-    threadPostDate VARCHAR(8) not null,
-    threadPostContent VARCHAR(777), not null,
-    articleImage varchar(255),
-    articleDate datetime(7) not null,
-	 foreign key(profileId) references author(postId),
-
+    postProfileId BINARY(16) NOT NULL,
+    postTitle varchar(32) not null,
+    postDateTime DATETIME(6) not null,
+    postContent VARCHAR(256) not null,
+    postImage varchar(255),
+	 INDEX(postProfileId),
+	 PRIMARY KEY(postId),
+	 foreign key(postProfileId) references profile(profileId)
 
 );
-create table Interactions(
-   redditUpvote,
-   redditDownvote,
-   articleReplyID VARCHAR(16) not null,
-   articleReply VARCHAR(777) not null,
-
+create table interaction(
+   redditUpvote, BOOLEAN
+   redditDownvote, BOOLEAN
+   articleReplyId VARCHAR(16) not null,
+   articleReply VARCHAR(256) not null,
+/*article columns are meant for the subject area of the post or reply*/
 );
 
 );
