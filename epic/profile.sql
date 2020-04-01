@@ -29,11 +29,17 @@ create table post(
 
 );
 create table interaction(
-   redditUpvote, BOOLEAN
-   redditDownvote, BOOLEAN
-   articleReplyId VARCHAR(16) not null,
-   articleReply VARCHAR(256) not null,
+   interactionId BINARY(16) not null,
+   interactionPostId BINARY (16) not null,
+   interactionProfileId BINARY(16) not null ,
+   interactionUpvote BOOLEAN,
+   interactionDownvote BOOLEAN,
+   interactionReplyId VARCHAR(16) not null,
+   interactionReply VARCHAR(256) not null,
+   INDEX(interactionProfileId),
+   INDEX(interactionPostId),
+   PRIMARY KEY(interactionId),
+   FOREIGN KEY(interactionProfileId) references profile(profileId),
+   FOREIGN KEY(interactionPostId) references post(postId)
 /*article columns are meant for the subject area of the post or reply*/
-);
-
 );
